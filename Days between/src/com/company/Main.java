@@ -13,28 +13,6 @@ import java.time.temporal.ChronoUnit;
             System.out.println("This program will calculate the no. of days remaining between current date (or initially put date), and final date.");
             System.out.println(" ");
 
-            /*
-            // Firstly, we have to collect user's date.
-            System.out.println("Enter today\'s date: ");
-            System.out.println("(In this format yyyy-mm-dd)");
-
-            // We have to put a scanner to record the user's input.
-            Scanner before = new Scanner(System.in);
-
-            // Make these two Strings beforehand, because we will need them later.
-            String dateBeforeString, dateAfterString;
-            dateBeforeString = before.nextLine();
-
-            // Now let's ask for the user's desired date.
-            System.out.println("Enter last date: ");
-            System.out.println("(In this format yyyy-mm-dd)");
-
-            // Again, we will need a new scanner for last date.
-            Scanner after = new Scanner(System.in);
-            dateAfterString = after.nextLine();
-            */
-
-
             System.out.println("Enter current year: (in yyyy format)");
             Scanner yearIn = new Scanner(System.in);
             int year;
