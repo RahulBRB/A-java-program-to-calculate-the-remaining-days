@@ -42,8 +42,8 @@ import java.time.temporal.ChronoUnit;
 
             System.out.println("Enter current month: (in mm format) ");
             Scanner monthIn = new Scanner(System.in);
-            int month;
-            month = monthIn.nextInt();
+            String month;
+            month = monthIn.nextLine();
 
             System.out.println("Enter today\'s date: (in dd format) ");
             Scanner dateIn = new Scanner(System.in);
@@ -53,7 +53,11 @@ import java.time.temporal.ChronoUnit;
             String dateBeforeString, dateAfterString;
 
             dateAfterString = year + "-" + month + "-" + date;
+
             System.out.println("The date you mentioned = " + dateAfterString);
+            System.out.println("Retype the date to confirm");
+            Scanner dateBeforeString1 = new Scanner(System.in);
+            String dateBeforeString2 = dateBeforeString1.nextLine();
 
             System.out.println("Enter year of last date: (In this format yyyy)");
             Scanner year1Int = new Scanner(System.in);
@@ -67,17 +71,22 @@ import java.time.temporal.ChronoUnit;
             Scanner date1Int = new Scanner(System.in);
             String date1 = date1Int.nextLine();
 
-
+            dateBeforeString = year1 + "-" + month1 + "-" + date1;
+            System.out.println("The date you mentioned = " + dateBeforeString);
+            System.out.println("Retype the date to confirm:");
+            Scanner dateAfterString1 = new Scanner(System.in);
+            String dateAfterString2 = dateAfterString1.nextLine();
 
             dateBeforeString = year1 + "-" + month1 + "-" + date1;
 
+
             System.out.println("Result:");
             // Parsing the date using .parse command with LocalDate
-            LocalDate dateBefore = LocalDate.parse(dateBeforeString);
-            LocalDate dateAfter = LocalDate.parse(dateAfterString);
+            LocalDate dateBefore = LocalDate.parse(dateBeforeString2);
+            LocalDate dateAfter = LocalDate.parse(dateAfterString2);
 
             // Calculating the number of days in between these two
-            double noOfDaysBetween = ChronoUnit.DAYS.between(dateAfter, dateBefore);
+            double noOfDaysBetween = ChronoUnit.DAYS.between(dateBefore, dateAfter);
 
             // Finally, displaying the number of days
             System.out.print("No. of days remaining is ");
@@ -87,3 +96,4 @@ import java.time.temporal.ChronoUnit;
 
         }
         }
+       
